@@ -1,0 +1,22 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "react-app",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    // 코드 스타일과 관련된 규칙
+    "indent": ["error", 2], // 들여쓰기 2칸
+    "quotes": ["error", "single"], // 작은따옴표 사용
+    "semi": ["error", "always"], // 세미콜론 필수
+    "comma-dangle": "off",
+
+    // TypeScript 관련 규칙
+    "@typescript-eslint/explicit-function-return-type": "off", // 함수 반환 타입 명시하지 않아도 됨
+    "@typescript-eslint/explicit-module-boundary-types": "off", // 모듈의 반환 타입 명시하지 않아도 됨
+    "@typescript-eslint/no-explicit-any": "warn" // any 타입 사용에 경고 표시
+  }
+}
